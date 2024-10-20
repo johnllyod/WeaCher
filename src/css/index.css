@@ -1,0 +1,198 @@
+html,
+body {
+  overflow-x: hidden;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: Garamond;
+}
+
+.Loading {
+  position: fixed;
+  right: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 2;
+  background-color: rgb(77 143 195 / 0.7);
+  display: none;
+}
+
+.LoadContainer {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.Error {
+  display: none;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.LogoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.PageName {
+  color: white;
+}
+
+.Container {
+  width: 100%;
+}
+
+.ResultFrame,
+.WeatherFilter,
+.Footer {
+  color: white;
+  width: 90%;
+  padding: 1%;
+  margin: 1px;
+  font-size: 15px;
+  margin: 0 auto;
+  border: solid 5px #ef8a84;
+  border-radius: 15px;
+  background-color: rgb(8 16 18 / 0.8);
+}
+
+.ResultFrame img {
+  background-color: white;
+  border-radius: 50%;
+}
+
+.ResultHolder {
+  display: block;
+}
+
+.DataHolder {
+  display: block;
+  margin-bottom: 5%;
+  text-align: left;
+}
+
+.ResultHolder p {
+  border-radius: 10%;
+  display: inline;
+  padding: 1%;
+}
+
+.WData {
+  color: #fff3eb;
+  border-radius: 10%;
+  margin-right: 3px;
+}
+
+.WLabel {
+  color: #ef8a84;
+  border-radius: 10%;
+  margin-right: 3px;
+}
+
+.WeatherFilter select {
+  margin-right: 2%;
+}
+
+label {
+  padding: 1px;
+  color: white;
+  font-size: 3vw;
+}
+
+select,
+input {
+  color: #ef8a84;
+  font-size: 5vw;
+  outline: none;
+  text-decoration: none;
+  border: solid 2px #4d8fc3;
+  border-radius: 7px;
+  background-color: rgb(0 0 0 / 0);
+  cursor: pointer;
+  display: block;
+}
+
+option {
+  padding: 0;
+  border: none;
+  border-radius: 7px;
+  background: rgb(17 40 56);
+}
+
+.Footer {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+}
+
+@media only screen and (min-width: 600px) {
+  select,
+  input {
+    font-size: 4vw;
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .ResultFrame,
+  .WeatherFilter,
+  .Footer {
+    font-size: 2vw;
+  }
+
+  .ResultHolder {
+    width: 40%;
+    display: inline-block;
+  }
+
+  label {
+    font-size: 2vw;
+  }
+
+  select,
+  input {
+    font-size: 2vw;
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .ResultFrame,
+  .WeatherFilter,
+  .Footer {
+    width: 50%;
+    font-size: 1.1vw;
+  }
+
+  .ResultHolder {
+    width: 40%;
+    display: inline-block;
+  }
+
+  label {
+    font-size: 1.1vw;
+  }
+
+  select,
+  input {
+    font-size: 1.1vw;
+    display: inline-block;
+  }
+
+  select {
+    padding: 5px;
+  }
+}

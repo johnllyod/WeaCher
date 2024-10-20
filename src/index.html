@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather Checker</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Weather Checker Web App" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="John Llyod Apolo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="/assets/img/WeaCher_logo.png" rel="icon" type="image/x-icon" />
+    <link href="/css/index.css" rel="stylesheet" />
+
+    <script
+      src="https://kit.fontawesome.com/2ca165613c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="Loading" id="Loading">
+      <div class="LoadContainer">
+        <h2>LOADING</h2>
+        <h3 id="Error" class="Error">
+          Failed to get data. Please try again later.
+        </h3>
+      </div>
+    </div>
+
+    <video autoplay muted loop id="myVideo">
+      <source src="/assets/video/Clouds.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+
+    <center>
+      <div class="LogoContainer">
+        <img src="/assets/img/WeaCher_logo.png" alt="Status Icon" />
+        <h1 class="PageName">WeaCher</h1>
+      </div>
+    </center>
+
+    <center>
+      <div class="Container">
+        <div class="ResultFrame">
+          <center>
+            <img
+              src="//cdn.weatherapi.com/weather/64x64/day/266.png"
+              alt="Status Icon"
+              id="StatusIcon"
+            />
+            <h3 id="Location">City, Country</h3>
+            <p id="Date">00/00/0000</p>
+          </center>
+          <div class="ResultHolder">
+            <div class="DataHolder">
+              <p class="WLabel">Status</p>
+              <p class="WData" id="Weather">-</p>
+            </div>
+            <div class="DataHolder">
+              <p class="WLabel">Avg Humidity</p>
+              <p class="WData" id="Avghumidity">-</p>
+            </div>
+            <div class="DataHolder">
+              <p class="WLabel">Sunrise</p>
+              <p class="WData" id="Sunrise">-</p>
+            </div>
+            <div class="DataHolder">
+              <p class="WLabel">Sunset</p>
+              <p class="WData" id="Sunset">-</p>
+            </div>
+            <div class="DataHolder">
+              <p class="WLabel">Daily Will It Rain</p>
+              <p class="WData" id="DWitR">-</p>
+            </div>
+            <div class="DataHolder">
+              <p class="WLabel">Daily Will It Snow</p>
+              <p class="WData" id="DWitS">-</p>
+            </div>
+            <div class="DataHolder">
+              <p class="WLabel">Total Snow cm</p>
+              <p class="WData" id="TotalSnowcm">-</p>
+            </div>
+          </div>
+          <div class="ResultHolder">
+            <div class="DataHolder">
+              <p class="WLabel">Moon Phase</p>
+              <p class="WData" id="MoonPhase">-</p>
+            </div>
+            <div class="DataHolder">
+              <p class="WLabel">Average Temperature Celsius</p>
+              <p class="WData" id="AvgtempC">-</p>
+            </div>
+            <div class="DataHolder">
+              <p class="WLabel">Minimum Temperature Celsius</p>
+              <p class="WData" id="MintempC">-</p>
+            </div>
+            <div class="DataHolder">
+              <p class="WLabel">Average Temperature Fahrenheit</p>
+              <p class="WData" id="AvgtempF">-</p>
+            </div>
+            <div class="DataHolder">
+              <p class="WLabel">Minimum Temperature Fahrenheit</p>
+              <p class="WData" id="MintempF">-</p>
+            </div>
+            <div class="DataHolder">
+              <p class="WLabel">Max Wind kph</p>
+              <p class="WData" id="MaxwindKph">-</p>
+            </div>
+            <div class="DataHolder">
+              <p class="WLabel">Max Wind mph</p>
+              <p class="WData" id="MaxwindMph">-</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </center>
+    <br />
+    <center>
+      <div class="Container">
+        <div class="WeatherFilter">
+          <label class="WLabel" for="City">Where</label>
+          <select name="city" id="City">
+            <option value="Berlin">Berlin</option>
+            <option value="Canberra">Canberra</option>
+            <option value="Doha">Doha</option>
+            <option value="Kuala Lumpur">Kuala Lumpur</option>
+            <option value="London">London</option>
+            <option value="Manila">Manila</option>
+            <option value="New Delhi">New Delhi</option>
+            <option value="Ottawa">Ottawa</option>
+            <option value="Tokyo">Tokyo</option>
+            <option value="Washington D.C.">Washington D.C.</option>
+          </select>
+
+          <label class="WLabel" for="When">When</label>
+          <select name="when" id="When">
+            <option value="1">Today</option>
+            <option value="2">Tomorrow</option>
+            <option value="3">In the next 2 days</option>
+          </select>
+          <br /><br />
+          <input
+            id="weatherBtn"
+            type="button"
+            name="getWeather"
+            value="Get Weather"
+          />
+        </div>
+      </div>
+    </center>
+
+    <center>
+      <div class="Footer">Created by John Llyod Apolo</div>
+    </center>
+    <script src="/js/get_weather.js"></script>
+  </body>
+</html>
